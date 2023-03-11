@@ -1,10 +1,12 @@
-﻿@model pelayoApp.Models.Person
+﻿@model Person
 @{
     ViewData["Title"] = "Home Page";
 }
 
-<h1>@Model.Fullname</h1>
-<h2>@Model.ID</h2>
+<h1>@ViewData["var1"]</h1>
+
+<p> my name is : @Model.Fullname</p>
+<p>I am very young : @Model.Age</p>
 
 
 <br>

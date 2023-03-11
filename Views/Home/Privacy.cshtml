@@ -1,14 +1,14 @@
-﻿@model List<pelayoApp.Models.Person>
+﻿@model List<Person>
+
 @{
     ViewData["Title"] = "Privacy Policy";
 }
 
-<ul>
-    @foreach (var item in Model)
-    {
-        <li>@item.ID = @item.Fullname </li>
-    }
-</ul>
+@foreach (var person in Model)
+{
+    <li>@person.Fullname = @person.Age </li>
+}
+
 
 <h1>HEllo Earth</h1>
 

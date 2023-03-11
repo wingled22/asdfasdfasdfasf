@@ -15,38 +15,44 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        // //ViewData & Viewbag
+        // ViewData["var1"] = "asdf";
+        // ViewBag.var2 = 2;
 
         Person p = new Person();
-        p.ID= 1;
+        p.Id = 1;
         p.Fullname = "windel";
+        p.Age = 25;
 
         return View(p);
     }
 
     public IActionResult Privacy()
     {
-
+        Person p = new Person(){
+            Id = 2,
+            Fullname = "another fullname",
+            Age= 60
+        };
         
-        Person p = new Person();
-        p.ID= 1;
-        p.Fullname = "windel";
+        Person p2 = new Person(){
+            Id = 3,
+            Fullname = "si junior",
+            Age= 31
+        };  
 
-        Person p2 = new Person();
-        p2.ID= 2;
-        p2.Fullname = "JEng";
+        Person p3 = new Person(){
+            Id = 4,
+            Fullname = "si sister",
+            Age= 45
+        };  
 
-        Person p3 = new Person();
-        p3.ID= 2;
-        p3.Fullname = "teletubies";
+        List<Person> listP = new List<Person>();
+        listP.Add(p);
+        listP.Add(p2);
+        listP.Add(p3);
 
-        List<Person> list = new List<Person>();
-
-        list.Add(p);
-        list.Add(p2);
-        list.Add(p3);
-
-
-        return View(list);
+        return View(listP);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
