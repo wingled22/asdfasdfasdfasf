@@ -1,10 +1,14 @@
-﻿@{
+﻿@model pelayoApp.Models.Person
+@{
     ViewData["Title"] = "Home Page";
 }
 
-@Html.ActionLink("Goto Helloworld", "Index", "HelloWorld")
+<h1>@Model.Fullname</h1>
+<h2>@Model.ID</h2>
 
-<a href="/helloworld/index">adto ta sa hello world</a>
+
+<br>
+<a href="/helloworld/index">adto sa hello world controller</a>
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
